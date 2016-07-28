@@ -1,5 +1,7 @@
 # Unity3D Tutorial - BlockBuster
 
+PDF Tutorial on how to create this game can be found [here](https://github.com/tomitrescak/Unity-Tutorial-BlockBuster/blob/master/Tutorial-Chapter2.zip)
+
 Script for camera controls (attach to `MainCamera`)
 
 ```csharp
