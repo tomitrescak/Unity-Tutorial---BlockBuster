@@ -1,6 +1,6 @@
 # Unity3D Tutorial - BlockBuster
 
-Script for camera controlss
+Script for camera controls (attach to `MainCamera`)
 
 ```csharp
 using UnityEngine;
@@ -28,24 +28,45 @@ public class CameraMovement : MonoBehaviour {
 }
 ```
 
-Script for the bullet:
+Script for shooting (Attach to `MainCamera`):
 
 ```csharp
 using UnityEngine;
 using System.Collections;
 
 public class ShootBullet : MonoBehaviour {
-
-	public float speed = 30;
-	public Rigidbody projectile;
-
-	void Update() {
-		if (Input.GetButtonDown("Fire1")) {
-			Rigidbody clone;
-			clone = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
-			clone.velocity = transform.TransformDirection(Vector3.forward * speed);
+	
+	public GameObject bullet;
+	public float speed = 30f;
+	
+	// Update is called once per frame
+	void Update () {
+		if (Input.GetMouseButtonDown(0)) {
+			var go = Instantiate(bullet, this.transform.position, Quaternion.identity) as GameObject;
+			var instance = go.GetComponent<Rigidbody>();
+			instance.velocity = transform.forward * speed;
 		}
+	
 	}
 }	
 ```
+
+Script for the bullet (Attach to `Bullet`)
+
+```csharp
+using UnityEngine;
+using System.Collections;
+
+public class DestroyByTime : MonoBehaviour
+{
+	public float lifetime;
+
+	void Start ()
+	{
+		Destroy (gameObject, lifetime);
+	}
+}
+```
+
+
 
