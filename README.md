@@ -1,6 +1,8 @@
 # Unity3D Tutorial - BlockBuster
 
-PDF Tutorial on how to create this game can be found [here](https://github.com/tomitrescak/Unity-Tutorial-BlockBuster/blob/master/Tutorial-Chapter2.zip)
+PDF Tutorial on how to create this game can be found here [https://github.com/tomitrescak/Unity-Tutorial-BlockBuster/blob/master/Tutorial-Chapter2.zip](https://github.com/tomitrescak/Unity-Tutorial-BlockBuster/blob/master/Tutorial-Chapter2.zip). 
+
+The tutorial comec from the book from Packt publishing, which you are encouraged to buy and use for learning.
 
 Script for camera controls (attach to `MainCamera`)
 
