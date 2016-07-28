@@ -12,16 +12,16 @@ public class CameraMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// read key and move according to direction given in the movement vector
-		if (Input.GetKey (KeyCode.UpArrow)) {
+		if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.W)) {
 			transform.Translate(new Vector3(0f, Time.deltaTime * speed, 0f));
-		} else if (Input.GetKey (KeyCode.DownArrow)) {
+		} else if (Input.GetKey (KeyCode.DownArrow) || Input.GetKey (KeyCode.S)) {
 			// don't let camera move under ground
 			if (transform.position.y > 0.5) {
 				transform.Translate(new Vector3(0f, -Time.deltaTime * speed, 0f));
 			}
-		} else if (Input.GetKey (KeyCode.LeftArrow)) {
+		} else if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) {
 			transform.Translate(new Vector3(-Time.deltaTime * speed, 0f, 0f));
-		} else if (Input.GetKey (KeyCode.RightArrow)) {
+		} else if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) {
 			transform.Translate(new Vector3(Time.deltaTime * speed, 0f, 0f));
 		}
 	}
